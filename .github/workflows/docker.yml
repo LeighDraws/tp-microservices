@@ -25,3 +25,6 @@ jobs:
           context: ./api-music
           push: true
           tags: leighdraws/api-music:latest
+
+      - name: Deploy to render
+        run: curl https://api.render.com/deploy/srv-d50k1vur433s73dbomr0?key=yfeFk8gjyiY
