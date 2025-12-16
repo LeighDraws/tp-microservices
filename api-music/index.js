@@ -48,7 +48,7 @@ app.post('/musics', (req, res) => {
 app.put('/musics/:id', (req, res) => {
   const music = musics.find(m => m.id === parseInt(req.params.id));
   if (!music) {
-    return res.status(404).send('Music not found BLablabla');
+    return res.status(404).send('Music not found');
   }
 
   const { title, artist } = req.body;
