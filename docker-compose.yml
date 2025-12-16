@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  api-movies:
+    build: ./api-movies
+  api-music:
+    build: ./api-music
+  api-gateway:
+    build: ./api-gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - api-movies
+      - api-music
