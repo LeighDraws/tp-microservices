@@ -7,7 +7,7 @@ app.use(express.json());
 
 // Base de données "en mémoire"
 let musics = [
-  { id: 1, title: 'Bohemian Rhapsody', artist: 'Queen' },
+  { id: 1, title: 'Redéployéééé', artist: 'Queen' },
   { id: 2, title: 'Stairway to Heaven', artist: 'Led Zeppelin' },
   { id: 3, title: 'Hotel California', artist: 'Eagles' }
 ];
@@ -48,7 +48,7 @@ app.post('/musics', (req, res) => {
 app.put('/musics/:id', (req, res) => {
   const music = musics.find(m => m.id === parseInt(req.params.id));
   if (!music) {
-    return res.status(404).send('Music not found BLABLA');
+    return res.status(404).send('Music not found');
   }
 
   const { title, artist } = req.body;
